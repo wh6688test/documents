@@ -1,0 +1,66 @@
+Python doc summary : 
+
+ A. some useful usages from itertools : 
+
+
+ 1. flattern 2 dimention list (matrix) :   
+
+    from itertools import *
+    a=[["a", "b"], [1, 2]]
+
+    print(a)
+    print(list(chain.from_iterable(a))) 
+ 
+    print [i for row in a for i in row] 
+
+
+2. differences among :  product(),  permutations(),  combinations(),  combinations_with_replacement()
+
+   #study a little more for the implementations of those -- 2 dimention list comprehensions
+
+   from itertools import product, permutations, combinations, combinations_with_replacement
+   a=[1, 5, 3, 4]
+   list(product(a, repeat=2))
+   list(permutations(a))
+   list(combinations(a), 2)
+   list(combinations_with_replacement(a), 2) 
+ 
+
+#Python List comprehension
+#flattern  a table (2 dimention)
+print [i for row in a for i in row] 
+
+#list comprehension with conditions
+
+
+#
+#dic comprehension : flip value and key
+#
+#switch value and key
+mydic={"a":"valuea", "b":"valyeb"}
+print({value, key for key, value in mydic.items()})
+#sort on value
+mydic={"a":"valuea", "c":"cc", "d":"valued"}
+t=sorted(mydic.items(), key=operator.itemgetter(1), reverse=False)
+print(t)
+tt=sorted(mydic.items(), key=lambda x, x[1], reverse=False)
+print(tt)
+ttt=sorted(mydic.items(), key=lambda (x, y):y, reverse=False)
+print(ttt)
+
+
+#Python dic
+
+#python operator : itemgetter used with dict
+#sort dict on value
+
+
+#Other python data structures
+
+
+#
+#Some practical problem solving
+#
+
+    
+    
